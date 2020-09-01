@@ -1,0 +1,55 @@
+::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background-image: black; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: azure; 
+    border-radius: 3px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: white;
+  }
+body {
+    margin: 0px;
+    font-family:  'Space Mono, Arial', monospace;
+    font: monospace;
+    background-color: black;
+    color: white;
+}
+* {
+    color: white;
+}
+a {
+    color: azure;
+    cursor: pointer;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+#input {
+    width: 98%;
+    outline: none;
+    background-color: black;
+    color: white;
+    border: 1px solid transparent;
+    font-family:  'Space Mono, Arial', monospace;
+    font: monospace;
+    caret-color: white;
+}
+span {
+    margin: 5px;
+}
+#movecur {
+  position: absolute;
+  cursor: default;
+  display: none;
+}
