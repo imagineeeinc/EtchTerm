@@ -43,7 +43,7 @@ function check() {
         Full()
     } else if (data == "commands" || data == "command") {
         var type = document.createElement("span")
-        type.innerHTML = "commands: <ul><li>'etter': to get the info on terminal</li><li>'commands': to get the commands avaliable</li><li>'full' = to make the terminal full screen</li><li>'youtube ' + 'your search query or word': will search on youtube for you query or word</li><li>'google' or 'search' + 'query word or search word': will search the query word or search word on google</li><li>Type JavaScript Commands and it will be exucuted</li><li>epkg('#you package url'): for installing a package</li><li>'goto' + 'webstie address': open the link in a new tab</li><li>'rolldice': rolls a dice bettwen 1 and 6</li></ul><br>"
+        type.innerHTML = "commands: <ul><li>'etter': to get the info on terminal</li><li>'commands': to get the commands avaliable</li><li>'full' = to make the terminal full screen</li><li>'youtube ' + 'your search query or word': will search on youtube for you query or word</li><li>'google' or 'search' + 'query word or search word': will search the query word or search word on google</li><li>Type JavaScript Commands and it will be exucuted</li><li>epkg('#you package url'): for installing a package</li><li>'goto' + 'webstie address': open the link in a new tab</li><li>'rolldice': rolls a dice bettwen 1 and 6</li><li>'wiki' + 'search query r search term': will open the search query or search term on wikipedia</li></ul><br>"
         box.appendChild(type);
     } else if (data.substr(0, 8) == "youtube ") {
         window.open('https://www.youtube.com/results?search_query=' + data.substr(8, data.length), '_blank')
@@ -147,8 +147,9 @@ function check_web_storage_support() {
 
 function getpkg() {
   if(check_web_storage_support() == true) {
-    mypkgs = JSON.parse(localStorage.getItem("pkgs"))
-    console.log(mypkgs.length)
+    if (localStorage.getItem("pkgs") != "") {
+      mypkgs = JSON.parse(localStorage.getItem("pkgs"))
+    }
     var i = 0
     while (i < mypkgs.length) {
       var type = document.createElement("script")
