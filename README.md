@@ -28,4 +28,4 @@ commands:
   <li>'wiki' + 'search query r search term': will open the search query or search term on wikipedia</li>
 <br>
 
-* *Making and using packages will have a docs section soon*
+*Making and using packages will have a docs section soon
