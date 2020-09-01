@@ -1,4 +1,6 @@
-# [GoTo Terminal](https://imagineeeinc.github.io/EtchTerm/app/)
+# [EtchTerm](https://imagineeeinc.github.io/EtchTerm/)
+
+## [GoTo Terminal](https://imagineeeinc.github.io/EtchTerm/app/)
 
 A Fast, Efficient and light weight Web Based Terminal written in Vanilla JavaScript
 
