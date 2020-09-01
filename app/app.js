@@ -148,14 +148,14 @@ function check_web_storage_support() {
 function getpkg() {
   if(check_web_storage_support() == true) {
     if (localStorage.getItem("pkgs") != "") {
-      mypkgs = JSON.parse(localStorage.getItem("pkgs"))
-    }
-    var i = 0
-    while (i < mypkgs.length) {
-      var type = document.createElement("script")
-      type.setAttribute("src", mypkgs[i])
-      document.getElementById("body").appendChild(type)
-      i++;
+      mypkgs = JSON.parse(localStorage.getItem("pkgs"));
+      var i = 0
+      while (i < mypkgs.length) {
+        var type = document.createElement("script")
+        type.setAttribute("src", mypkgs[i])
+        document.getElementById("body").appendChild(type)
+        i++;
+      }
     }
   }
 }
