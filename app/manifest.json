@@ -1,0 +1,52 @@
+{
+    "manifest_version": 2,
+    "name": "EtchTerm",
+    "short_name": "EtchTerm",
+    "start_url": "index.html",
+    "display": "fullscreen",
+    "background_color": "black",
+    "theme_color": "black",
+    "orientation": "any",
+    "icons": [
+        {
+            "src": "https://imagineeeinc.github.io/EtchTerm/app/Favicon/android-chrome-192x192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "https://imagineeeinc.github.io/EtchTerm/app/Favicon/apple-touch-icon.png",
+            "type": "image/png",
+            "sizes": "180x180"
+        },
+        {
+            "src": "https://imagineeeinc.github.io/EtchTerm/app/Favicon/android-chrome-512x512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        },
+        {
+            "src": "https://imagineeeinc.github.io/EtchTerm/app/Favicon/favicon-16x16.png",
+            "type": "image/png",
+            "sizes": "16x16"
+        },
+        {
+            "src": "https://imagineeeinc.github.io/EtchTerm/app/Favicon/favicon-32x32.png",
+            "type": "image/png",
+            "sizes": "32x32"
+        },
+        {
+            "src": "https://imagineeeinc.github.io/EtchTerm/app/Favicon/favicon.ico",
+            "type": "image/ico",
+            "sizes": "48x48"
+        },
+        {
+            "src": "Favicon/maskable_icon.png",
+            "sizes": "930x930",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "url": "https://imagineeeinc.github.io/EtchTerm/app/index.html",
+    "lang": "English",
+    "screenshots": [],
+    "description": "A Fast, Efficient and light weight Web Based Terminal written in Vanilla JavaScript"
+}
