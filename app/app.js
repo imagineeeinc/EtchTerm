@@ -147,7 +147,7 @@ function check_web_storage_support() {
 
 function getpkg() {
   if(check_web_storage_support() == true) {
-    if (localStorage.getItem("pkgs") != "") {
+    if (localStorage.getItem("pkgs") != undef) {
       mypkgs = JSON.parse(localStorage.getItem("pkgs"));
       var i = 0
       while (i < mypkgs.length) {
