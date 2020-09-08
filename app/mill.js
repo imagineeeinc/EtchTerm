@@ -1,8 +1,5 @@
 function Hello() {
-    console.log("yay")
-    var type = document.createElement("br")
-      box.appendChild(type)
-    var type = document.createElement("span")
-        type.innerHTML = "Hello<br>"
-        box.appendChild(type);
+    console.log("yay you used a package")
+    br()
+    println("Hello From Mill.js a test package")
 }
