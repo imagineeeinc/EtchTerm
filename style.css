@@ -40,7 +40,7 @@ img {
     text-align: center;
 }
 #head > h1 {
-    font-size: 80px;
+    font-size: 50px;
 }
 #features {
     display: flex;
@@ -58,5 +58,8 @@ img {
     text-decoration: underline;
 }
 .feature-box:hover {
+    box-shadow: 0 0 20px #2b2b2b;
+}
+.feature-box:active {
     box-shadow: 0 0 20px #2b2b2b;
 }
