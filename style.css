@@ -63,6 +63,17 @@ img {
 .feature-box:active {
     box-shadow: 0 0 20px #2b2b2b;
 }
+section {
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+}
+section:hover {
+    box-shadow: 0 0 10px lightgrey;
+}
+section:active {
+    box-shadow: 0 0 10px lightgrey;
+}
 a {
   color: aqua;
   background: linear-gradient(black 50%, #3d3d3d 50%);
