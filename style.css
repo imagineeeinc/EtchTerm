@@ -63,3 +63,7 @@ img {
 .feature-box:active {
     box-shadow: 0 0 20px #2b2b2b;
 }
+a {
+  color: aqua;
+  background: linear-gradient(black 50%, #3d3d3d 50%);
+}
