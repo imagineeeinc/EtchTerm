@@ -3,3 +3,7 @@ body {
     font-family:  'Space Mono, Arial', monospace;
     font: monospace;
 }
+a {
+  color: darkslateblue;
+  background: linear-gradient(white 50%, lightgrey 50%);
+}
