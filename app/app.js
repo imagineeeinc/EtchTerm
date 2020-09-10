@@ -6,7 +6,7 @@ var data
 var mypkgs = []
 document.getElementById("os").innerHTML = LargeOS()
 setInterval(function() {
-    input.style.width = cijs("sizeInW") - 25 + "px"
+    input.style.width = cijs("sizeInW") - 300 + "px"
 }, 1)
 input.focus()
 getpkg()

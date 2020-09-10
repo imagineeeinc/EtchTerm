@@ -57,14 +57,42 @@ section {
 
 }
 section:hover {
-    box-shadow: 0 0 10px lightgrey;
+  box-shadow: 0 0 10px lightgrey;
 }
 section:active {
     box-shadow: 0 0 10px lightgrey;
+}#index {
+  float: left;
+  position: fixed;
+  height: 100%;
+  width: 300px;
+  background-color: #f7f7f7;
+  z-index: 2;
+  top: 0;
+  padding: 20px;
 }
-@media only screen and (min-width: 680px) {}
-@media only screen and (max-width: 679px) {
+#body {
+  position: absolute;
+  left: 341px;
+}
+#index:hover {
+  box-shadow: 0 0 10px lightgrey;
+}
+@media only screen and (min-width: 680px) {
+  #body {
+    position: absolute;
+    left: 341px;
+  }
   #menu {
-    dispaly: none;
+    visibility: hidden;
+  }
+}
+@media only screen and (max-width: 679px) {
+  #index {
+    visibility: hidden;
+  }
+  #body {
+    position: absolute;
+    left: 0px;
   }
 }

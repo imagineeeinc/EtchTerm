@@ -7,17 +7,20 @@
         <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
 
         <meta name="theme-color" content="black"/>
-        <link rel="apple-touch-icon" sizes="180x180" href="app/Favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="app/Favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="app/Favicon/favicon-16x16.png">
-        <link rel='icon' href='app/Favicon/favicon.ico' type='image/x-icon'>
+        <link rel="apple-touch-icon" sizes="180x180" href="../app/Favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../app/Favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../app/Favicon/favicon-16x16.png">
+        <link rel='icon' href='../app/Favicon/favicon.ico' type='image/x-icon'>
 
         <link rel="stylesheet" type="text/css" href="style.css" >
         <link rel="manifest" href="manifest.json">
-        <script src="app.js"></script>
+        <script src="../app/ClientInfo.min.js"></script>
     </head>
     <body>
-      <span id="menu"><!--&#9776;-->m</span>
+      <div id="index">
+      </div>
+      <span id="menu">&#9776;</span>
+      <div id="body">
       <section if="head">
       <h1 style="text-align: center;"><a href="https://imagineeeinc.github.io/EtchTerm/">EtchTerm</a>
       <a href="https://imagineeeinc.github.io/EtchTerm/Docs/">Docs</a></h1></section>
@@ -66,5 +69,7 @@
         <section id="packages">
           <h1>Packages</h1>
         </section>
+        </div>
+        <script src="app.js"></script>
     </body>
 </html>
