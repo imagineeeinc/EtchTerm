@@ -70,6 +70,7 @@ section:active {
   z-index: 2;
   top: 0;
   padding: 20px;
+  overflow-y:scroll;
 }
 #body {
   position: absolute;
@@ -77,6 +78,14 @@ section:active {
 }
 #index:hover {
   box-shadow: 0 0 10px lightgrey;
+}
+#index > ul > li {
+  list-style: none;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+#index > ul > li > a {
+  background: linear-gradient(#f7f7f7 50%, lightgrey 50%);
 }
 @media only screen and (min-width: 680px) {
   #body {
@@ -88,11 +97,14 @@ section:active {
   }
 }
 @media only screen and (max-width: 679px) {
-  #index {
-    visibility: hidden;
-  }
+  /*#index {
+    display: none;
+  }*/
   #body {
     position: absolute;
     left: 0px;
+  }
+  .hmenu {
+    visibility: hidden;
   }
 }
