@@ -197,6 +197,11 @@ function error(insert) {
   type.innerHTML = '<span style="color: red;">' + insert + "</span>"
   box.appendChild(type)
 }
+function good(insert) {
+  var type = document.createElement("div")
+  type.innerHTML = '<span style="color: springgreen;">' + insert + "</span>"
+  box.appendChild(type)
+}
 function br() {
   var type = document.createElement("br")
   box.appendChild(type)
