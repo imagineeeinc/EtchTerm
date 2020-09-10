@@ -18,13 +18,21 @@
     </head>
     <body>
       <div id="index" class="hmenu">
+        <h1>EtchTerm Docs</h1>
         <ul>
+          <li><a href="#maindocs"><b>Main Documentation (For anyone to use)</b></a></li>
           <li><a href="#head">EtchTerm Docs</a></li>
           <li><a href="#What is et">What Is EtchTerm</a></li>
           <li><a href="#links">Links</a></li>
           <li><a href="#Commands">Commands</a></a></li>
           <li><a href="#serarchcommands">Search Commands</a></li>
           <li><a href="#packages">Packages</a></li>
+          <br>
+          <li><a href="#maindocs"><b>Advanced Documentation (For some people)</b></a></li>
+          <li><a href="#advancedcommands">Advanced Commands</a></li>
+          <li><a href="#maybe features">Maybe Features</a></li>
+          <br>
+          <li><a href="#devdocs"><b>Developer Documentation (For developers to use)</b></a></li>
         </ul>
       </div>
       <div id="body">
@@ -35,6 +43,8 @@
       <br>
       <h1 style="text-align: center;">Docs is work in progress</h1>
       <br><br>
+      <section id="maindocs">
+        <h1>The Main Docs</h1>
       <section id="What is et">
         <h1>What is EtchTerm</h1>
         EtchTerm is a web based terminal  wrriten in pure JavaScript, 
@@ -75,7 +85,7 @@
           Type <b>full</b> to make the terminal full screen and get out of full screen
           </section>
           <br>
-          <section>Next get started with <a href="#serarchcommands">Search Commands</a> or <a href="#packages">packages</a>
+          <section>Next get started with <a href="#serarchcommands">Search Commands</a> or <a href="#packages">packages</a> or if you know what you are doing get started on the <a href="#advancedcommands">Advanced Commands</a>
           </section>
         </section>
         <section id="serarchcommands">
@@ -110,6 +120,49 @@
             <h1>showpkgs()</h1>
             This command will show your all the packages url that are installed
           </section>
+          <section>
+            <h3>epkgremove("the package you want to remve url")</h3>
+            Will remove the the packge you want to remove with a the valid package url
+          </section>
+          <section>
+            Best practice is to run <b>showpkgs()</b> and get the url you want to remove and type <b>epkgremove("the packge url you want to remove")</b> and it will remove the package
+          </section>
+        </section>
+        </section>
+        <br>
+        <section id="advanced">
+          <h1>Advanced Documentation</h1>
+          This is slightly advanced docs going a bit deeper in to the commands and functionality and the inner workings
+          <br><br>
+          <b>NOTE: This is not the Developer Documentation</b>
+        <section id="advancedcommands">
+          <h1>Advanced commands</h1>
+          <section>
+            The advanced commands are for people understands atleast some JavaScript
+            </section>
+            <section>
+              <h3>#Any JavaScript command</h3>
+              Type any JavaScript command and it will run it, it will also throw errors if there are any
+            </section>
+        </section>
+        <section id="maybefeatures">
+          <h1>Features that might be added</h1>
+          This section will document feature that will or might be added
+          <section>
+              <h4>Run snipets</h4>
+              will be a more advanced version of just typing in JavaScript commands, 
+              it will open a text box to type in your functions and will be able to see your code better
+            </section>
+            <section>
+              <h3>make packages right in the terminal</h3>
+              there might be a feature that will open a text box and you will type in your package code and then click or tpye an add command which will add the package, this can be used for debugging and teaching
+            </section>
+        </section>
+        </section>
+        <section id="devdocs">
+          <h1>Developer Documentation</h1>
+          <h3>Not Ready Yet</h3>
+          The Developer Documentaion is for developers who want to make packages using the api and packaging and other little bits
         </section>
         </div>
         <script src="app.js"></script>

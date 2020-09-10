@@ -69,10 +69,10 @@ section {
   margin: 5px;
 }
 section:hover {
-    box-shadow: 0 0 10px lightgrey;
+    box-shadow: 0 0 10px #2b2b2b;
 }
 section:active {
-    box-shadow: 0 0 10px lightgrey;
+    box-shadow: 0 0 10px #2b2b2b;
 }
 a {
   color: aqua;
