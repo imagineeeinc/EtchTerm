@@ -62,6 +62,11 @@ function check() {
     } else if (data == "rolldice") {
         br()
         println(Math.round(Math.floor(Math.random(1) * 6)))
+    } else if (data == "docs") {
+      window.open("https://imagineeeinc.github.io/EtchTerm/Docs/", '_blank')
+
+      br()
+      println("opened docs in a new tab")
     } else {
       /*var F=new Function (data);
       input.value = ""
