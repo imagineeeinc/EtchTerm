@@ -6,7 +6,7 @@ var data
 var mypkgs = []
 document.getElementById("os").innerHTML = LargeOS()
 setInterval(function() {
-    input.style.width = cijs("sizeInW") - 300 + "px"
+    input.style.width = cijs("sizeInW") - 22 + "px"
 }, 1)
 input.focus()
 getpkg()
@@ -40,7 +40,7 @@ function check() {
         Full()
     } else if (data == "commands" || data == "command") {
         br()
-        println("commands: <ul><li>'etter': to get the info on terminal</li><li>'commands': to get the commands avaliable</li><li>'full' = to make the terminal full screen</li><li>'youtube ' + 'your search query or word': will search on youtube for you query or word</li><li>'google' or 'search' + 'query word or search word': will search the query word or search word on google</li><li>Type JavaScript Commands and it will be exucuted</li><li>epkg('#you package url'): for installing a package or a library and save it forever</li><li>'goto' + 'webstie address': open the link in a new tab</li><li>'rolldice': rolls a dice bettwen 1 and 6</li><li>'wiki' + 'search query r search term': will open the search query or search term on wikipedia</li><li>addlib('#you libary url'): to install a package or libary once and one this session is closed it will be discarded</li><li>showpkgs(): to display your packages</li></ul><br>")
+        println("commands: <ul><li>'etter': to get the info on terminal</li><li>'commands': to get the commands avaliable</li><li>'full' = to make the terminal full screen</li><li>'youtube ' + 'your search query or word': will search on youtube for you query or word</li><li>'google' or 'search' + 'query word or search word': will search the query word or search word on google</li><li>Type JavaScript Commands and it will be exucuted</li><li>epkg('#you package url'): for installing a package or a library and save it forever</li><li>'goto' + 'webstie address': open the link in a new tab</li><li>'rolldice': rolls a dice bettwen 1 and 6</li><li>'wiki' + 'search query r search term': will open the search query or search term on wikipedia</li><li>addlib('#you libary url'): to install a package or libary once and one this session is closed it will be discarded</li><li>showpkgs(): to display your packages</li><li>epkgremove('#the package you want to remove url'): removes the packge you want to remove url</li></ul><br>")
     } else if (data.substr(0, 8) == "youtube ") {
         window.open('https://www.youtube.com/results?search_query=' + data.substr(8, data.length), '_blank')
         br()
@@ -154,6 +154,24 @@ function showpkgs() {
   br()
   println("your packages:")
   println(localStorage.getItem("pkgs"))
+}
+//removepkg
+function epkgremove(removeurl) {
+    var pkgsn = JSON.parse(localStorage.getItem("pkgs"));
+    if (pkgsn.indexOf(removeurl) ==-1) {
+      println("You don't have '" + removeurl + "' installed")
+    }
+    var r = pkgsn.indexOf(removeurl)
+    console.log(r)
+    pkgsn.splice(0, 1)
+    if (pkgsn.indexOf(removeurl) > -1) {
+      pkgsn.pop()
+    }
+    document.querySelector('script[src="' + removeurl +'"]').remove()
+    if(check_web_storage_support() == true) {
+    localStorage.setItem("pkgs", JSON.stringify(pkgsn));
+    }
+    println("removed '" + removeurl + "'")
 }
 //get packages functions
 function getpkg() {
