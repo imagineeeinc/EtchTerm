@@ -21,7 +21,6 @@ window.onclick = function(event) {
   document.getElementById("movecur").style.left = event.clientX + "px"
   document.getElementById("movecur").style.top = event.clientY + "px"
   document.getElementById("movecur").style.display = "block"
-  input.focus()
 }
 //window.open('https://youtube.com', '_blank');
 //for wikipedia: https://wikipedia.org/w/index.php?search=
@@ -71,9 +70,10 @@ function check() {
         println(Math.round(Math.floor(Math.random(1) * 6)))
     } else if (data == "docs") {
       window.open("https://imagineeeinc.github.io/EtchTerm/Docs/", '_blank')
-
       br()
       println("opened docs in a new tab")
+    } else if (data == "runsnipet") {
+      println("<span id='code'><textarea></textarea></span>")
     } else {
       /*var F=new Function (data);
       input.value = ""

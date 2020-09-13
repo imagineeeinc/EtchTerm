@@ -5,7 +5,7 @@ body {
 }
 ::-webkit-scrollbar {
 
-    width: 6px;
+    width: 15px;
 
   }
   
@@ -17,7 +17,7 @@ body {
   /* Handle */
   ::-webkit-scrollbar-thumb {
     background: #e8e8e8; 
-    border-radius: 3px;
+    border-radius: 5px;
   }
   
   /* Handle on hover */
