@@ -46,7 +46,7 @@ function check() {
         Full()
     } else if (data == "commands" || data == "command") {
         br()
-        println("commands: <ul><li>'etter': to get the info on terminal</li><li>'commands': to get the commands avaliable</li><li>'full' = to make the terminal full screen</li><li>'youtube ' + 'your search query or word': will search on youtube for you query or word</li><li>'google' or 'search' + 'query word or search word': will search the query word or search word on google</li><li>Type JavaScript Commands and it will be exucuted</li><li>epkg('#you package url'): for installing a package or a library and save it forever</li><li>'goto' + 'webstie address': open the link in a new tab</li><li>'rolldice': rolls a dice bettwen 1 and 6</li><li>'wiki' + 'search query r search term': will open the search query or search term on wikipedia</li><li>addlib('#you libary url'): to install a package or libary once and one this session is closed it will be discarded</li><li>showpkgs(): to display your packages</li><li>epkgremove('#the package you want to remove url'): removes the packge you want to remove url</li></ul><br>")
+        println("commands: <ul><li>'etter': to get the info on terminal</li><li>'commands': to get the commands avaliable</li><li>'full' = to make the terminal full screen</li><li>'youtube ' + 'your search query or word': will search on youtube for you query or word</li><li>'google' or 'search' + 'query word or search word': will search the query word or search word on google</li><li>Type JavaScript Commands and it will be exucuted</li><li>epkg('#you package url'): for installing a package or a library and save it forever</li><li>'goto' + 'webstie address': open the link in a new tab</li><li>'rolldice': rolls a dice bettwen 1 and 6</li><li>'wiki' + 'search query r search term': will open the search query or search term on wikipedia</li><li>addlib('#you libary url'): to install a package or libary once and one this session is closed it will be discarded</li><li>showpkgs(): to display your packages</li><li>epkgremove('#the package you want to remove url'): removes the packge you want to remove url</li><li>runsnipet: this will open a text box for you to type your commands and it will be excuted</li></ul><br>")
     } else if (data.substr(0, 8) == "youtube ") {
         window.open('https://www.youtube.com/results?search_query=' + data.substr(8, data.length), '_blank')
         br()
@@ -73,7 +73,8 @@ function check() {
       br()
       println("opened docs in a new tab")
     } else if (data == "runsnipet") {
-      println("<span id='code'><textarea></textarea></span>")
+      println("<span id='codebox'><textarea rows='10' id='code'></textarea></span>")
+      println("<a id='runbut' onclick='runsnipet()'>Run The Snipet</a>")
     } else {
       /*var F=new Function (data);
       input.value = ""
@@ -94,6 +95,22 @@ function check() {
      }
     }
     input.value = ""
+}
+//runsnipet function
+function runsnipet() {
+  br()
+  var code = document.getElementById("code").value
+  document.getElementById("codebox").innerHTML = code
+  document.getElementById("codebox").id = "oldcodebox"
+  document.getElementById("runbut").remove()
+  try {
+    var F=new Function (code);
+    return F();
+  } 
+  catch (err) {
+    br()
+    println(err.message)
+  }
 }
 //full screen function
 function Full() {
@@ -204,9 +221,7 @@ function save() {
 
 //print api functions
 function println(insert) {
-
   var type = document.createElement("div")
-
   type.innerHTML = insert
   box.appendChild(type)
 }
