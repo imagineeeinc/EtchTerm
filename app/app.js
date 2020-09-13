@@ -189,7 +189,7 @@ function epkgremove(removeurl) {
     console.log(r)
     pkgsn.splice(0, 1)
     if (pkgsn.indexOf(removeurl) > -1) {
-      pkgsn.pop()
+      pkgsn.shift()
     }
     document.querySelector('script[src="' + removeurl +'"]').remove()
     if(check_web_storage_support() == true) {
