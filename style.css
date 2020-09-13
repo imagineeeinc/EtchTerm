@@ -58,9 +58,11 @@ img {
     text-decoration: underline;
 }
 .feature-box:hover {
+    transition-duration: .5s;
     box-shadow: 0 0 20px #2b2b2b;
 }
 .feature-box:active {
+    transition-duration: .5s;
     box-shadow: 0 0 20px #2b2b2b;
 }
 section {
@@ -69,12 +71,44 @@ section {
   margin: 5px;
 }
 section:hover {
+    transition-duration: .5s;
     box-shadow: 0 0 10px #2b2b2b;
 }
 section:active {
+    transition-duration: .5s;
     box-shadow: 0 0 10px #2b2b2b;
 }
-a {
+a:not(#goto) {
   color: aqua;
   background: linear-gradient(black 50%, #3d3d3d 50%);
+}
+a:not(#goto > a):hover {
+    transition-duration: 2s;
+    background: #3d3d3d;
+}
+#goto {
+    padding: 20px;
+    margin: 10px;
+}
+#goto > a {
+    padding: 20px;
+    margin: 10px;
+    color: white;
+    background-image: linear-gradient(to right, #940a00, #000594);
+    border-radius: 10px;
+}
+#goto > a:hover {
+    transition-duration: .2s;
+    padding: 25px;
+    margin: 15px;
+    border-radius: 15px;
+}
+#goto > a:hover {
+    padding: 25px;
+    margin: 15px;
+    border-radius: 15px;
+}
+#cover:hover {
+    transition-duration: .5s;
+    box-shadow: 0 0 10px #2b2b2b;
 }
