@@ -6,9 +6,10 @@ var data
 var mypkgs = []
 document.getElementById("os").innerHTML = LargeOS()
 setInterval(function() {
-    input.style.width = cijs("sizeInW") - 22 + "px"
+    input.style.width = cijs("sizeInW") - 30 + "px"
 }, 1)
 input.focus()
+console.log(localStorage.getItem("pkgs"))
 getpkg()
 window.onclick = function(event) {
   document.getElementById("movecur").style.left = event.clientX + "px"
@@ -176,7 +177,7 @@ function epkgremove(removeurl) {
 //get packages functions
 function getpkg() {
   if(check_web_storage_support() == true) {
-    if (localStorage.getItem("pkgs") != undefined) {
+    if (localStorage.getItem("pkgs") != "") {//localStorage.getItem("pkgs") != undefined || 
       mypkgs = JSON.parse(localStorage.getItem("pkgs"));
       var i = 0
       while (i < mypkgs.length) {
