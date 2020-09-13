@@ -78,11 +78,11 @@ section:active {
     transition-duration: .5s;
     box-shadow: 0 0 10px #2b2b2b;
 }
-a:not(#goto) {
+a/*:not(#goto)*/ {
   color: aqua;
   background: linear-gradient(black 50%, #3d3d3d 50%);
 }
-a:not(#goto > a):hover {
+a/*:not(#goto > a)*/:hover {
     transition-duration: 2s;
     background: #3d3d3d;
 }
