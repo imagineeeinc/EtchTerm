@@ -103,8 +103,9 @@ section:active {
   #body {
     position: absolute;
     left: 0px;
+    width: 100%;
   }
   .hmenu {
-    visibility: hidden;
+    display: none
   }
 }
