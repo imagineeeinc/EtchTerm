@@ -44,12 +44,14 @@ a {
     height: 55px;
 }
 #menu:hover {
+  transition-duration: .2s;
     background-color: grey;
 }
 #menu:active {
     background-color: grey;
 }
 section {
+  transition-duration: .5s;
   z-index: 1;
   border-radius: 5px;
   padding: 5px;
@@ -61,7 +63,8 @@ section:hover {
   box-shadow: 0 0 10px lightgrey;
 }
 section:active {
-    box-shadow: 0 0 10px lightgrey;
+  transition-duration: .5s;
+  box-shadow: 0 0 10px lightgrey;
 }#index {
   float: left;
   position: fixed;
