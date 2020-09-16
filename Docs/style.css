@@ -42,6 +42,7 @@ a {
     border-radius: 5px;
     width: 50px;
     height: 55px;
+    transition-duration: .2s;
 }
 #menu:hover {
   transition-duration: .2s;
@@ -75,6 +76,7 @@ section:active {
   top: 0;
   padding: 20px;
   overflow-y:scroll;
+  transition-duration: .2s;
 }
 #body {
   position: absolute;
@@ -90,6 +92,9 @@ section:active {
 }
 #index > ul > li > a {
   background: linear-gradient(#f7f7f7 50%, lightgrey 50%);
+}
+#body > section > h1 {
+  font-size: 30px
 }
 @media only screen and (min-width: 680px) {
   #body {

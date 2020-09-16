@@ -88,6 +88,10 @@
           <section><h3>full</h3>
           Type <b>full</b> to make the terminal full screen and get out of full screen
           </section>
+          <section>
+            <h3>cls</h3>
+            <b>cls</b> just clears the command line
+          </section>
           <br>
           <section>Next get started with <a href="#serarchcommands">Search Commands</a> or <a href="#packages">packages</a> or if you know what you are doing get started on the <a href="#advancedcommands">Advanced Commands</a>
           </section>
@@ -186,14 +190,27 @@
             so it is faster to load
             <section>
               <h3>The Engine</h3>
-              Th first thing is for the responsive styling with of certain elements, like the input which with if defined in css with 100‰ width will fail on different width display, so instead 
+              <section>
+                <h4>width</h4>
+              The first thing is for the responsive styling with of certain elements, like the input which with if defined in css with 100‰ width will fail on different width display, so instead it gets rhe width of the display and sets the input to the screen with minus a few pixeles
+              </section>
+              <section>
+                <h4>The Large cursor</h4>
+                So in the windows command line if you click a certain point in the command line window a box will pop up as if it is a cursor, so in this terminal it is the same, it moves.
             </section>
+            <section>
+              <h4>The Command Checking process</h4>
+              First if the key is pressed down and it is the '<b>Enter</b>' key it will run the check() Function
+              <br>
+              The Check Function puts the command through a if and else, and then if any of them matches it executes what it n3ed to do, if the command does not go through any of the commands it is then run as a command, so if you type <b>alert("hello world")</b> it will run it and if it catches a error it will take the error and print it, and thats how packages also works learn more in the developers Documentation
           </section>
+          </section>
+        </section>
         </section>
         </section>
         <section id="devdocs">
           <h1>Developer Documentation</h1>
-          <h3>Not Ready Yet</h3>
+          <h2>Not Ready Yet</h2>
           The Developer Documentaion is for developers who want to make packages using the api and packaging and other little bits
         </section>
         </div>

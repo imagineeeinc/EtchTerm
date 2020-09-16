@@ -4,12 +4,14 @@ var full = false
 var elem = document.documentElement;
 var data
 var mypkgs = []
-document.getElementById("os").innerHTML = LargeOS()
+//to set the os
+document.getElementById("os").innerHTML = "Etch " + LargeOS()
 setInterval(function() {
     input.style.width = cijs("sizeInW") - 30 + "px"
 }, 1)
 input.focus()
 //console.log(localStorage.getItem("pkgs"))
+//to fix any local storage problems
 if(check_web_storage_support() == true) {
   if (localStorage.getItem("pkgs") != "" || localStorage.getItem("pkgs") != null || localStorage.getItem("pkgs") != undefined) {
     mypkgs = ["none.js"]
@@ -17,10 +19,15 @@ if(check_web_storage_support() == true) {
   }
 }
 getpkg()
+//to show and move the moving cursor
 window.onclick = function(event) {
   document.getElementById("movecur").style.left = event.clientX + "px"
   document.getElementById("movecur").style.top = event.clientY + "px"
   document.getElementById("movecur").style.display = "block"
+}
+//the hide the moving cursor
+input.onkeydown = function() {
+  document.getElementById("movecur").style.display = "none"
 }
 //window.open('https://youtube.com', '_blank');
 //for wikipedia: https://wikipedia.org/w/index.php?search=
@@ -46,7 +53,7 @@ function check() {
         Full()
     } else if (data == "commands" || data == "command") {
         br()
-        println("commands: <ul><li>'etter': to get the info on terminal</li><li>'commands': to get the commands avaliable</li><li>'full' = to make the terminal full screen</li><li>'youtube ' + 'your search query or word': will search on youtube for you query or word</li><li>'google' or 'search' + 'query word or search word': will search the query word or search word on google</li><li>Type JavaScript Commands and it will be exucuted</li><li>epkg('#you package url'): for installing a package or a library and save it forever</li><li>'goto' + 'webstie address': open the link in a new tab</li><li>'rolldice': rolls a dice bettwen 1 and 6</li><li>'wiki' + 'search query r search term': will open the search query or search term on wikipedia</li><li>addlib('#you libary url'): to install a package or libary once and one this session is closed it will be discarded</li><li>showpkgs(): to display your packages</li><li>epkgremove('#the package you want to remove url'): removes the packge you want to remove url</li><li>runsnipet: this will open a text box for you to type your commands and it will be excuted</li></ul><br>")
+        println("commands: <ul><li>'etter': to get the info on terminal</li><li>'commands': to get the commands avaliable</li><li>'full' = to make the terminal full screen</li><li>'youtube ' + 'your search query or word': will search on youtube for you query or word</li><li>'google' or 'search' + 'query word or search word': will search the query word or search word on google</li><li>Type JavaScript Commands and it will be exucuted</li><li>epkg('#you package url'): for installing a package or a library and save it forever</li><li>'goto' + 'webstie address': open the link in a new tab</li><li>'rolldice': rolls a dice bettwen 1 and 6</li><li>'wiki' + 'search query r search term': will open the search query or search term on wikipedia</li><li>addlib('#you libary url'): to install a package or libary once and one this session is closed it will be discarded</li><li>showpkgs(): to display your packages</li><li>epkgremove('#the package you want to remove url'): removes the packge you want to remove url</li><li>runsnipet: this will open a text box for you to type your commands and it will be excuted</li><li>cls: clear the commandline</li></ul><br>")
     } else if (data.substr(0, 8) == "youtube ") {
         window.open('https://www.youtube.com/results?search_query=' + data.substr(8, data.length), '_blank')
         br()
@@ -75,6 +82,8 @@ function check() {
     } else if (data == "runsnipet") {
       println("<span id='codebox'><textarea rows='10' id='code'></textarea></span>")
       println("<a id='runbut' onclick='runsnipet()'>Run The Snipet</a>")
+    } else if (data == "cls") {
+      cls()
     } else {
       /*var F=new Function (data);
       input.value = ""
@@ -86,7 +95,7 @@ function check() {
      } 
      catch (err) {
        br()
-       println(err.message)
+       error(err.message)
       /*var type = document.createElement("br")
       box.appendChild(type)
       type = document.createElement("span")
@@ -250,4 +259,8 @@ function good(insert) {
 function br() {
   var type = document.createElement("br")
   box.appendChild(type)
+}
+//clear function
+function cls() {
+  box.innerHTML = ""
 }
