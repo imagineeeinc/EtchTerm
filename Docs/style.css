@@ -42,14 +42,17 @@ a {
     border-radius: 5px;
     width: 50px;
     height: 55px;
+    transition-duration: .2s;
 }
 #menu:hover {
+  transition-duration: .2s;
     background-color: grey;
 }
 #menu:active {
     background-color: grey;
 }
 section {
+  transition-duration: .5s;
   z-index: 1;
   border-radius: 5px;
   padding: 5px;
@@ -61,7 +64,8 @@ section:hover {
   box-shadow: 0 0 10px lightgrey;
 }
 section:active {
-    box-shadow: 0 0 10px lightgrey;
+  transition-duration: .5s;
+  box-shadow: 0 0 10px lightgrey;
 }#index {
   float: left;
   position: fixed;
@@ -72,6 +76,7 @@ section:active {
   top: 0;
   padding: 20px;
   overflow-y:scroll;
+  transition-duration: .2s;
 }
 #body {
   position: absolute;
@@ -87,6 +92,9 @@ section:active {
 }
 #index > ul > li > a {
   background: linear-gradient(#f7f7f7 50%, lightgrey 50%);
+}
+#body > section > h1 {
+  font-size: 30px
 }
 @media only screen and (min-width: 680px) {
   #body {
